@@ -15,7 +15,7 @@ let g:colors_name='darcula'
 
 let s:p={
       \ 'null': ['NONE', 'NONE'],
-      \ 'bg': ['#2B2B2B', 235],
+      \ 'bg': ['#222222', 235],
       \ 'fg': ['#A9B7C6', 145],
       \ 'cursor': ['#BBBBBB', 250],
       \ 'identifierUnderCaret': ['#344134', 237],
@@ -240,6 +240,7 @@ call s:Hi('ErrorSign', s:p.errorStripe, s:p.gutter)
 call s:Hi('WarningSign', s:p.warnStripe, s:p.gutter)
 call s:Hi('InfoSign', s:p.infoStripe, s:p.gutter)
 call s:Hi('HintSign', s:p.hintStripe, s:p.gutter)
+call s:Hi('PositiveSign', s:p.string, s:p.gutter)
 call s:Hi('IdentifierUnderCaret', s:p.null, s:p.identifierUnderCaret)
 call s:Hi('IdentifierUnderCaretWrite', s:p.null, s:p.identifierUnderCaretWrite)
 call s:Hi('InstanceField', s:p.constant)
@@ -619,3 +620,26 @@ hi! link shOperator NormalFg
 
 " help
 hi! link helpHyperTextJump Number
+
+" BarBar
+call s:Hi('BufferCurrent', s:p.fg, s:p.bg)
+call s:Hi('BufferCurrentIndex', s:p.link, s:p.bg)
+call s:Hi('BufferCurrentMod', s:p.warnStripe, s:p.bg)
+call s:Hi('BufferCurrentSign', s:p.link, s:p.bg)
+call s:Hi('BufferCurrentTarget', s:p.error, s:p.bg)
+
+call s:Hi('BufferVisible', s:p.warning, s:p.gutter)
+call s:Hi('BufferVisibleIndex', s:p.warning, s:p.gutter)
+call s:Hi('BufferVisibleMod', s:p.warnStripe, s:p.gutter)
+call s:Hi('BufferVisibleSign', s:p.lineNumber, s:p.gutter)
+call s:Hi('BufferVisibleTarget', s:p.error, s:p.gutter)
+
+call s:Hi('BufferInactive', s:p.lineNumber, s:p.gutter)
+call s:Hi('BufferInactiveIndex', s:p.lineNumber, s:p.gutter)
+call s:Hi('BufferInactiveMod', s:p.warnStripe, s:p.gutter)
+call s:Hi('BufferInactiveSign', s:p.lineNumber, s:p.gutter)
+call s:Hi('BufferInactiveTarget', s:p.error, s:p.gutter)
+
+call s:Hi('BufferTabpages', s:p.link, s:p.gutter)
+call s:Hi('BufferTabpageFill', s:p.lineNumber, s:p.gutter)
+
